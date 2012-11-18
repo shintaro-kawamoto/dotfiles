@@ -1,0 +1,14 @@
+[user]
+	name = KAWAMOTO Shintaro
+	email = haibaran@gmail.com
+[credential]
+	helper = osxkeychain
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+[core]
+	editor = vi
