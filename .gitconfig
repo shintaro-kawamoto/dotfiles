@@ -12,3 +12,4 @@
 	ci = commit
 [core]
 	editor = vi
+	quotepath = false
