@@ -1,0 +1,19 @@
+// Settings in here override those in "Default/Preferences.sublime-settings", and
+// are overridden in turn by file type specific settings.
+{
+    "rulers": [80, 100],
+
+    "translate_tabs_to_spaces": true,
+
+    "draw_minimap_border": true,
+
+    "highlight_line": true,
+
+    "trim_trailing_white_space_on_save": true,
+
+    "auto_complete_with_fields": true,
+
+    "shift_tab_unindent": true,
+
+    "ignored_packages": []
+}
