@@ -6,8 +6,9 @@ eval "$(rbenv init -)"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ll='ls -l'
-alias la='ls -al'
+alias ls='ls -F'
+alias ll='ls -lF'
+alias la='ls -alF'
 
 # color
 export CLICOLOR=1
