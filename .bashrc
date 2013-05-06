@@ -9,6 +9,8 @@ alias mv='mv -i'
 alias ls='ls -F'
 alias ll='ls -lF'
 alias la='ls -alF'
+alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 # color
 export CLICOLOR=1
