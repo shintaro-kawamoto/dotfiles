@@ -12,6 +12,8 @@ set shiftwidth=4
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
 
+colorscheme desert
+
 filetype off
 
 if has('vim_starting')
