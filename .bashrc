@@ -3,11 +3,15 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-
 # rbenv設定
 if [ -e ~/.rbenv ]; then
     export PATH="$PATH":$HOME/.rbenv/bin
     eval "$(rbenv init -)"
+fi
+
+# nodebrew設定
+if [ -e ~/.nodebrew ]; then
+    export PATH="$PATH":$HOME/.nodebrew/current/bin
 fi
 
 # alias
