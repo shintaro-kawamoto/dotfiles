@@ -18,9 +18,19 @@ fi
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='ls --color=auto -F'
-alias ll='ls -lF'
-alias la='ls -alF'
+
+case "${OSTYPE}" in
+darwin*)
+    alias ls='ls -G'
+    alias ll='ls -lF'
+    alias la='ls -alF'
+    ;;
+linux*)
+    alias ls='ls --color'
+    alias ll='ls -lF'
+    alias la='ls -alF'
+    ;;
+esac
 
 case "`uname`" in
     Darwin) # OSがMacの場合
