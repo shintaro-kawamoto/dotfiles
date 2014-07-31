@@ -31,6 +31,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'osyo-manga/vim-over'
 "NeoBundle 'mattn/zencoding-vim'
  
 filetype plugin indent on     " required!
