@@ -15,6 +15,7 @@ if [ -e ~/.vimrc ]; then
     echo "move .vimrc .vimrc.bak"
 fi
 ln -s dotfiles/.vimrc ~/.vimrc
+mkdir ~/vimbackup
 
 if [ -e ~/.gvimrc ]; then
     mv ~/.gvimrc ~/.gvimrc.bak
