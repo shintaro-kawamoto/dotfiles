@@ -12,10 +12,10 @@ echo "options single-request-reopen" | sudo tee -a /etc/resolv.conf
 wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 sudo rpm -Uvh epel-release-6-8.noarch.rpm
 sudo sed -i".org" -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/epel.repo
-rm -rf -Uvh epel-release-6-8.noarch.rpm
+rm -rf epel-release-6-8.noarch.rpm
 wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 sudo rpm -Uvh remi-release-6.rpm
-rm -rf -Uvh remi-release-6.rpm
+rm -rf remi-release-6.rpm
 
 
 sudo yum update -y
@@ -34,6 +34,7 @@ sudo chkconfig iptables off
 
 # install git
 sudo yum install -y zlib-devel perl-devel gettext gcc curl-devel
+#sudo yum install -y git
 wget https://git-core.googlecode.com/files/git-1.9.0.tar.gz
 tar xfvz git-1.9.0.tar.gz
 cd git-1.9.0
@@ -78,7 +79,7 @@ rbenv rehash
 # install node.js(nodebrew)
 wget git.io/nodebrew
 perl nodebrew setup
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-source ~/.bashrc
+echo 'export PATH="$HOME/.nodebrew/current/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 nodebrew install-binary stable
-nodebrew use use v0.10.30
+nodebrew use v0.10.30
