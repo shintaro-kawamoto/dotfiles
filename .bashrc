@@ -10,9 +10,9 @@ fi
 
 if [ -f ~/.git-completion.bash ]; then
     source ~/.git-completion.bash
-    PS1='[\[\033[01;32m\]\u@\h\[\033[01;33m\] \w\[\033[31m\]$(__git_ps1)\[\033[00m\]]\n\[\033[01;34m\]\$\[\033[00m\]'
+    PS1='[\[\033[01;32m\]\u@\h\[\033[01;33m\] \w\[\033[31m\]$(__git_ps1)\[\033[00m\]]\n\[\033[01;34m\]\$ \[\033[00m\]'
 else 
-    PS1='[\[\033[01;32m\]\u@\h\[\033[01;33m\] \w\[\033[00m\]]\n\[\033[01;34m\]\$\[\033[00m\]'
+    PS1='[\[\033[01;32m\]\u@\h\[\033[01;33m\] \w\[\033[00m\]]\n\[\033[01;34m\]\$ \[\033[00m\]'
 fi
 
 # rbenv設定
@@ -24,6 +24,12 @@ fi
 # nodebrew設定
 if [ -e ~/.nodebrew ]; then
     export PATH="$PATH":$HOME/.nodebrew/current/bin
+fi
+
+# java設定(macのみ)
+if [ -e /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home ]; then
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
+    export PATH=$JAVA_HOME/bin:$PATH
 fi
 
 # alias
