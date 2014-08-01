@@ -65,5 +65,8 @@ rbenv rehash
 # install node.js
 git clone git://github.com/creationix/nvm.git ~/.nvm
 echo . ~/.nvm/nvm.sh >> ~/.bash_profile
+echo 'export PATH="$HOME/.nvm/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 nvm install v0.10.30
+nvm use "v0.10.30"
 
