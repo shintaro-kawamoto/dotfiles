@@ -3,6 +3,18 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
+# prompt設定
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+fi
+
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+    PS1='[\[\033[01;32m\]\u@\h\[\033[01;33m\] \w\[\033[31m\]$(__git_ps1)\[\033[00m\]]\n\[\033[01;34m\]\$\[\033[00m\]'
+else 
+    PS1='[\[\033[01;32m\]\u@\h\[\033[01;33m\] \w\[\033[00m\]]\n\[\033[01;34m\]\$\[\033[00m\]'
+fi
+
 # rbenv設定
 if [ -e ~/.rbenv ]; then
     export PATH="$PATH":$HOME/.rbenv/bin

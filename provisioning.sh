@@ -45,6 +45,12 @@ cd ..
 rm -rf git-1.9.0
 rm git-1.9.0.tar.gz
 
+wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+wget https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+mv git-completion.bash .git-completion.bash
+mv git-prompt.sh .git-prompt.sh
+
+
 # install vim
 sudo yum install -y vim
 mkdir -p ~/.vim/bundle
