@@ -36,6 +36,9 @@ fi
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+if [ -f ~/bin/ssh-host-color ]; then
+    alias ssh=~/bin/ssh-host-color
+fi
 
 case "${OSTYPE}" in
 darwin*)
