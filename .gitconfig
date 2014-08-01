@@ -11,7 +11,7 @@
 	sh = show
 	so = remote show origin
 	ft = fetch
-	ba = branch -a
+	ba = branch -avv
 	bm = branch --merged
 	bn = branch --no-merged
 	# log
@@ -33,3 +33,5 @@
 [core]
 	editor = vim
 	quotepath = false
+[push]
+	default = simple
