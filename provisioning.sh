@@ -44,6 +44,11 @@ cd ..
 rm -rf git-1.9.0
 rm git-1.9.0.tar.gz
 
+# install vim
+sudo yum install -y vim
+mkdir -p ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
 # install openssl
 sudo yum install -y openssl openssl-devel
 
@@ -62,11 +67,18 @@ gem update --system
 gem install rails --no-ri --no-rdoc -V
 rbenv rehash
 
-# install node.js
-git clone git://github.com/creationix/nvm.git ~/.nvm
-echo . ~/.nvm/nvm.sh >> ~/.bash_profile
-echo 'export PATH="$HOME/.nvm/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
-nvm install v0.10.30
-nvm use "v0.10.30"
+# install node.js(nvm)
+#git clone git://github.com/creationix/nvm.git ~/.nvm
+#echo . ~/.nvm/nvm.sh >> ~/.bash_profile
+#echo 'export PATH="$HOME/.nvm/bin:$PATH"' >> ~/.bash_profile
+#source ~/.bash_profile
+#nvm install v0.10.30
+#nvm use "v0.10.30"
 
+# install node.js(nodebrew)
+wget git.io/nodebrew
+perl nodebrew setup
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+source ~/.bashrc
+nodebrew install-binary stable
+nodebrew use use v0.10.30
