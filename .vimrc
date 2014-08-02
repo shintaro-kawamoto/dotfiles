@@ -11,6 +11,7 @@ set tabstop=4
 set shiftwidth=4
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
+set noundofile
 
 colorscheme desert
 
