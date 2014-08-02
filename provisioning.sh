@@ -54,6 +54,8 @@ wget https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 mv git-completion.bash .git-completion.bash
 mv git-prompt.sh .git-prompt.sh
 
+# install mercurial
+sudo yum install -y mercurial
 
 # install vim
 sudo yum install -y vim
