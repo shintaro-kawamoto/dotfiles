@@ -63,12 +63,11 @@ fi
 # go
 export GOPATH=$HOME/go
 export PATH="$PATH":$GOPATH/bin
-#case "${OSTYPE}" in
-#linux*) # for linux
-#    ;;
-#*) # other
-#    ;;
-#esac
+case "${OSTYPE}" in
+linux*) # for linux
+    export PATH="$PATH":/usr/local/go/bin
+    ;;
+esac
 
 
 # color
