@@ -96,10 +96,9 @@ nodebrew use v0.10.30
 
 # install go
 wget http://golang.org/dl/go1.3.linux-amd64.tar.gz
-tar -C $HOME -xzf go1.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.3.linux-amd64.tar.gz
 rm -rf go*.tar.gz
-echo 'export GOROOT="$HOME/go"' >> ~/.bash_profile
-source ~/.bash_profile
-echo 'export PATH="$GOROOT/go/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+mkdir go
 
+# config dotfiles
+# https://github.com/shintaro-kawamoto/dotfiles.git

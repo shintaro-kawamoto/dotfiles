@@ -61,8 +61,15 @@ if [ -f ~/bin/ssh-host-color ]; then
 fi
 
 # go
-export GOROOT=$HOME/go
-export PATH="$PATH":$GOROOT/bin
+export GOPATH=$HOME/go
+export PATH="$PATH":$GOPATH/bin
+#case "${OSTYPE}" in
+#linux*) # for linux
+#    ;;
+#*) # other
+#    ;;
+#esac
+
 
 # color
 #export CLICOLOR=1
