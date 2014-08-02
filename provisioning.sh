@@ -2,6 +2,10 @@
 
 echo "options single-request-reopen" | sudo tee -a /etc/resolv.conf
 
+# timezone
+sudo cp /etc/localtime /etc/localtime.org
+sudo cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
 # proxy
 # echo "http_proxy = http://proxy.com:PORT/" | sudo tee -a /etc/wgetrc
 # echo "https_proxy = http://proxy.com:PORT/" | sudo tee -a /etc/wgetrc
