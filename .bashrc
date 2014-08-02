@@ -69,6 +69,25 @@ linux*) # for linux
     ;;
 esac
 
+# peco
+_peco_history() {
+    local l=$(HISTTIMEFORMAT= history | tac | sed -e 's/^\s*[0-9]\+\s\+//' | peco --query "$READLINE_LINE")
+    READLINE_LINE="$l"
+    READLINE_POINT=${#l}
+}
+bind -x '"\C-r": _peco_history'
+bind    '"\C-xr": reverse-search-history'
+
+_peco_cd() {
+    local l=$(ghq list --full-path | peco --query "$READLINE_LINE")
+    READLINE_LINE="$l"
+    READLINE_POINT=${#l}
+    if [ -n "$l" ]; then
+        cd "$l"
+    fi
+}
+bind -x '"\C-xg": "_peco_cd"'
+
 
 # color
 #export CLICOLOR=1
