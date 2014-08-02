@@ -60,7 +60,9 @@ if [ -f ~/bin/ssh-host-color ]; then
     alias ssh=~/bin/ssh-host-color
 fi
 
-
+# go
+export GOROOT=$HOME/go
+export PATH="$PATH":$GOROOT/bin
 
 # color
 #export CLICOLOR=1
