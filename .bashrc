@@ -83,7 +83,7 @@ _peco_cd() {
     READLINE_LINE="$l"
     READLINE_POINT=${#l}
     if [ -n "$l" ]; then
-        cd "$l"
+        pushd "$l"
     fi
 }
 bind -x '"\C-xg": "_peco_cd"'
