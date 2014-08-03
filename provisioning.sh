@@ -57,6 +57,9 @@ mv git-prompt.sh .git-prompt.sh
 # install mercurial
 sudo yum install -y mercurial
 
+# install zsh
+sudo yum install -y zsh
+
 # install vim
 sudo yum install -y vim
 mkdir -p ~/.vim/bundle
