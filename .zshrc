@@ -115,6 +115,14 @@ if [ -f ~/bin/ssh-host-color ]; then
     alias ssh=~/bin/ssh-host-color
 fi
 
+# alias
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ll='ls -lF'
+alias la='ls -alF'
+alias lv='ls -avF'
+
 # peco
 function peco-src () {
     local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
