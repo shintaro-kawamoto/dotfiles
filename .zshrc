@@ -104,9 +104,16 @@ export GOPATH=$HOME/go
 export PATH="$PATH":$GOPATH/bin
 export PATH="$PATH":/usr/local/go/bin
 
-# renv
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+# rbenv
+if [ -e ~/.rbenv ]; then
+    export PATH="$PATH":$HOME/.rbenv/bin
+    eval "$(rbenv init -)"
+fi
+
+# ssh
+if [ -f ~/bin/ssh-host-color ]; then
+    alias ssh=~/bin/ssh-host-color
+fi
 
 # peco
 function peco-src () {
