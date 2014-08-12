@@ -20,6 +20,7 @@ rm -rf epel-release-6-8.noarch.rpm
 wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 sudo rpm -Uvh remi-release-6.rpm
 rm -rf remi-release-6.rpm
+sudo rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
 
 
 sudo yum update -y
@@ -53,6 +54,8 @@ wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bas
 wget https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 mv git-completion.bash .git-completion.bash
 mv git-prompt.sh .git-prompt.sh
+
+sudo yum install -y tig
 
 # install mercurial
 sudo yum install -y mercurial

@@ -1,0 +1,9 @@
+set main-view = line-number:true,interval=10 id date author:full commit-title:graph=yes,refs=yes
+
+# color
+color line-number white default
+color date cyan default
+color file magenta default
+color graph-commit red default
+color help-group magenta default
+
