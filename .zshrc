@@ -81,6 +81,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+RPROMPT="%F{green}[%D %T]%f"
+
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
 
